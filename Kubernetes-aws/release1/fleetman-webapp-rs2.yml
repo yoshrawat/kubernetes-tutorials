@@ -1,0 +1,26 @@
+apiVersion: apps/v1
+kind: ReplicaSet
+metadata:
+  name: fleetman-webapp-rs
+  labels:
+    app: fleetman-webapp
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      labels:
+        app: fleetman-webapp
+        type: front-end
+
+---
+apiVersion: v1
+kind: Pod
+metadata:
+  name: fleetman-webapp-pod
+  labels:
+    app: fleetman-webapp
+    type: front-end
+spec:
+  containers:
+    - name: fleetman-webapp
+      image: richardchesterwood/k8s-fleetman-webapp-angular:release0-5
