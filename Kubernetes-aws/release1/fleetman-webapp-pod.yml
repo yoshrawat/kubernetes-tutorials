@@ -4,6 +4,7 @@ metadata:
   name: fleetman-webapp-pod
   labels:
     app: fleetman-webapp
+    type: front-end
 spec:
   containers:
     - name: fleetman-webapp
