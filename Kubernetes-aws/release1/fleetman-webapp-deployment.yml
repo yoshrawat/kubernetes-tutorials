@@ -1,0 +1,13 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: fleetman-webapp-rs
+  labels:
+    app: fleetman-webapp
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      labels:
+        app: fleetman-webapp
+

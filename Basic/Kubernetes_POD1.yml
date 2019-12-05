@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: myFirstApp-Pod
+  labels:
+    app: myFirstApp
+    type: backend-service
+spec:
+  containers:
+    - name: nginx
+      image: nginx
