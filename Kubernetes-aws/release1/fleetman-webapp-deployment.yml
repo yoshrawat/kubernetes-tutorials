@@ -1,14 +1,23 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: fleetman-webapp-rs
+  name: fleetman-webapp-ds
   labels:
     app: fleetman-webapp
 spec:
   replicas: 3
   selector:
     matchLabels:
+      app: fleetman-webapp
+      type: front-end
+  template:
+    metadata:
+      name: fleetman-webapp-pod
       labels:
         app: fleetman-webapp
         type: front-end
+    spec:
+      containers:
+        - name: fleetman-webapp
+          image: richardchesterwood/k8s-fleetman-webapp-angular:release0-5
 
