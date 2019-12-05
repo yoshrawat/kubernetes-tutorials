@@ -10,4 +10,5 @@ spec:
     matchLabels:
       labels:
         app: fleetman-webapp
+        type: front-end
 
