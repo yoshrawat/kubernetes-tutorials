@@ -6,6 +6,10 @@ metadata:
     app: fleetman-webapp
 spec:
   replicas: 3
+  selector:
+    matchLabels:
+      app: fleetman-webapp
+      type: front-end
   template:
     metadata:
       name: fleetman-webapp-pod
