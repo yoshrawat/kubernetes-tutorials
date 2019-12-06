@@ -1,0 +1,17 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: fleetman-db-pod
+  labels:
+    app: fleetman-db
+    type: db-end
+spec:
+  containers:
+    - name: mysql
+      image: mysql:5
+      env:
+        - name: MYSQL_ROOT_PASSWORD
+          value: password
+        - name: MYSQL_DATABASE
+          value: fleetman
+
