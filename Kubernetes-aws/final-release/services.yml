@@ -32,12 +32,12 @@ spec:
   ports:
     - name: http
       port: 8161
-      #nodePort: 30010
+      nodePort: 30010
 
     - name: endpoint
       port: 61616
 
-  type: LoadBalancer
+  type: NodePort
 
 ---
 apiVersion: v1
