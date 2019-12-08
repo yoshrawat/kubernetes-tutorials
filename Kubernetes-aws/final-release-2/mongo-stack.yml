@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: mongodb
-          image: mongo:3.6.5-jessie
+          image: mongo:latest
           volumeMounts:
             - name: mongo-persistent-storage
               mountPath: /data/db
